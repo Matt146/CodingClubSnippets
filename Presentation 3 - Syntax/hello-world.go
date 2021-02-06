@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"runtime"
 )
 
 /****************************************
@@ -97,15 +98,29 @@ func main() {
 	// If age is 16, then print "You are 16 years old."
 	if age == 16 {
 		fmt.Println("You are 16 years old.")
+	} else {
+		fmt.Println("You are NOT 16 years old.")
 	}
 
 	// If age is less than 21, then print "You are underage."
 	if age < 21 {
 		fmt.Println("You are underage.")
+	} else if age == 21 {
+		fmt.Println("Have a free beer!")
 	}
 
 	// If age is NOT equal to 1, then print "You are not 1 years old.""
 	if age != 1 {
 		fmt.Println("You are NOT 1 years old.")
+	}
+
+	// Switch statements - Check which OS you're running on :D
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("You're using a OS X!")
+	case "linux":
+		fmt.Println("You're using Linux!")
+	default:
+		fmt.Printf("%s\n", os)
 	}
 }
