@@ -94,6 +94,7 @@ func main() {
 	// >  - greater than
 	// <  - less than
 	age := 18
+	country := "USA"
 
 	// If age is 16, then print "You are 16 years old."
 	if age == 16 {
@@ -109,6 +110,17 @@ func main() {
 		fmt.Println("Have a free beer!")
 	}
 
+	// AND and OR in if statements
+	// If your age is greater than or equal to 21 AND your country is the USA,
+	// then you are of legal age. Else, you are not.
+	if age >= 21 && country == "USA" {
+		fmt.Println("You are of legal age.")
+	} else {
+		fmt.Println("You are NOT of legal age.")
+	}
+
+	//
+
 	// If age is NOT equal to 1, then print "You are not 1 years old.""
 	if age != 1 {
 		fmt.Println("You are NOT 1 years old.")
@@ -122,5 +134,36 @@ func main() {
 		fmt.Println("You're using Linux!")
 	default:
 		fmt.Printf("%s\n", os)
+	}
+
+	// DO NOT do this lol
+	fmt.Println("Hello, world!")
+	fmt.Println("Hello, world!")
+	fmt.Println("Hello, world!")
+	fmt.Println("Hello, world!")
+	fmt.Println("Hello, world!")
+
+	// DO THIS instead :D
+	// FOR LOOPS
+	for x := 0; x < 5; x++ {
+		fmt.Println("Hello, world!")
+	}
+
+	// Golang does not have the traditional "while loops"
+	// but does have unconditional for loops
+	// You can instead do the following:
+	running := true
+	for {
+		if running == false {
+			fmt.Println("HELLO!")
+			break // this "breaks" out of the loop
+		}
+		//------------------------------------------------------------------------------
+		// If I uncomment the next line of code, the code will continue to go
+		// on indefinitely because the keyword, "continue" just causes the loop to
+		// keep going.
+		//------------------------------------------------------------------------------
+		// continue // THIS IS THE KEYWORD
+		running = false
 	}
 }
