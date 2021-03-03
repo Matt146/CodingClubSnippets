@@ -27,7 +27,7 @@ func main() {
 	fmt.Printf("Player name: %v\n", name)
 	fmt.Printf("Team: %v\n", team)
 	fmt.Printf("Age: %v\n", age)
-	fmt.Printf("Free throw percentage: %.2f\n", freeThrowPercentage*100)
+	fmt.Printf("Free throw percentage: %v\n", freeThrowPercentage*100)
 	fmt.Printf("Two pointer percentage: %.2f\n", twoPointerPercentage*100)
 	fmt.Printf("Three pointer percentage: %.2f\n", threePointersPercentage*100)
 }
